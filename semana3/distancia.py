@@ -2,20 +2,20 @@ import math
 
 class DistanciaPuntos():
 
-    X1= None
-    Y1 = None
-    X2 = None
-    Y2 = None
+    x1= None
+    y1 = None
+    x2 = None
+    y2 = None
 
     def __init__ (self):
         pass
-    def operacion(self, X1, X2, Y1, Y2):
-        resultado_1 = X2-X1
-        elevacion1 = resultado_1**2
-        resultado_2 = Y2-Y1
-        elevacion2 = resultado_2**2
-        resultado3 = elevacion1+elevacion2
-        final= math.sqrt(resultado3)
+    def operacion(self, x1, x2, y1, y2):
+        resultado_1 = x2-x1
+        elevacion_1 = resultado_1**2
+        resultado_2 = y2-y1
+        elevacion_2 = resultado_2**2
+        resultado_3 = elevacion_1+elevacion_2
+        final= math.sqrt(resultado_3)
         print("La distancia de un punto a otro es ",final)
  
 punto = DistanciaPuntos()
