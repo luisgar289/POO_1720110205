@@ -1,25 +1,18 @@
 class Segundos():
+    # Un minuto tiene 60 segundos
+    # Una hora tiene 3600 segundos
+    # Un dia tiene 86400
 
-    dias = 0
-    diaFinal = 0
-    dia = int hora * 24
+    dia = 0
 
     def __init__ (self):
         pass
 
-    def hora (self):
-        hora = 60 * 60
-        print("Una hora tiene ", hora)
-    
-    def dia (self):
-        dia = int(input ("¿Cuantos segundos tiene una hora?",))
-        diaFinal = dia * 24
-        print("Un dia tiene: ", diaFinal)
-    
     def calculo (self):
-        print(diaFinal)
+        dia = int(input("Dias: "))
+        final = 86400 * dia
+        print("En ", dia , " hay ", final , " segundos")
 
 calculo = Segundos()
-calculo.hora()
-calculo.dia()
+
 calculo.calculo()
