@@ -1,22 +1,25 @@
 class Segundos():
 
     dias = 0
-    segundosDia = 0
-    final = 0
+    diaFinal = 0
+    dia = int hora * 24
 
     def __init__ (self):
         pass
 
-    def entrada (self):
-        self.dias = input("Dias: ")
+    def hora (self):
+        hora = 60 * 60
+        print("Una hora tiene ", hora)
     
     def dia (self):
-        self.segundosDia = 3600 * 24
-
-    def operacion(self):
-        self.final = calculo.entrada() * calculo.dia()
-        print("Segundos: " , )
+        dia = int(input ("¿Cuantos segundos tiene una hora?",))
+        diaFinal = dia * 24
+        print("Un dia tiene: ", diaFinal)
     
+    def calculo (self):
+        print(diaFinal)
+
 calculo = Segundos()
-calculo.entrada()
+calculo.hora()
 calculo.dia()
+calculo.calculo()
