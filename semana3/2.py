@@ -13,14 +13,15 @@ class Temperatura():
 
         for proceso in range(pregunta):
             contador += 1
-            final = 0
+            suma = 0
 
             celcius = int(input("Temperatura {} en celcius: ".format(contador)))
             farenheit = celcius * 1.8 + 32
-            final += farenheit
+            print(farenheit)
+            suma += farenheit
             
             if contador == pregunta:
-                promedio = final / pregunta
+                promedio = suma / contador # arreglar esta parte
                 print(promedio)
 
 
