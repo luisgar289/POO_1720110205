@@ -7,23 +7,20 @@ class Temperatura():
 
     def proceso (self):
 
-        pregunta = int(input("¿Cuantos calculos realizaras? "))
+        pregunta = int(input("Numero de Temperaturas: "))
 
         contador = 0
+        suma = 0
 
         for proceso in range(pregunta):
+
             contador += 1
-            suma = 0
-
             celcius = int(input("Temperatura {} en celcius: ".format(contador)))
-            farenheit = celcius * 1.8 + 32
-            print(farenheit)
+            farenheit = float(celcius * 1.8 + 32)
             suma += farenheit
-            
-            if contador == pregunta:
-                promedio = suma / contador # arreglar esta parte
-                print(promedio)
 
+        promedio = suma / pregunta
+        print("Promedio en Farenheit: {}°F" .format(round (promedio,2)))
 
 calculo = Temperatura()
 calculo.proceso()
