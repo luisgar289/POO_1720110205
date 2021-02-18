@@ -1,27 +1,27 @@
 class Examen():
-
+  
     materia = None
     alumno = None
-    clases = None
-    retardos = None
-    falta = None
-    falta1 = None
-    promedio = None
+    clases = 0
+    retardos = 0
+    falta = 0
+    falta1 = 0
+    promedio = 0
     bucle = None
 
-    def __init__ (self):
+    def __init__(self):
         pass
 
-    def materias (self):
+    def materia (self):
         self.materia = input("Materia: ")
-            
-    def alumnos (self):
+           
+    def alumno(self):
         self.alumno = input("Nombre del alumno: ")
 
-    def clase (self):
-        self.clases = input("Numero de clases: ")
+    def clase(self):
+        self.clases = int(input("Numero de clases: "))
             
-    def retardo (self):
+    def retardo(self):
         self.retardos = int(input("Numero de retardos: "))
             
     def falta (self):
@@ -29,28 +29,25 @@ class Examen():
             self.falta = int(input("Numero de faltas: " ))
             falta1 = self.falta + 1
         else:
-            self.falta = input("Numero de faltas: ")
-            print(self.falta)
+            self.falta = int(input("Numero de faltas: "))
 
     def promedio (self):
-        self.promedio = int(((self.falta1 * 100) / self.clases))
+        self.promedio = self.falta1 * 100 / self.clases
 
     def resultado (self):
-        if self.promedio >= 80:
+        if 80 >= self.promedio:
             print("{} tiene derecho a presentar examen" .format(self.alumno))
         else:
             print("{} no tiene derecho a presentar examen" .format(self.alumno))
             
-    def bucle (self):
         bucle = str(input("Otra evaluación (s/n): "))
 
-evaluacion = Examen
+evaluacion = Examen()
 
-evaluacion.materias()
-evaluacion.alumnos()
+evaluacion.materia()
+evaluacion.alumno()
 evaluacion.clase()
 evaluacion.retardo()
 evaluacion.falta()
 evaluacion.promedio()
 evaluacion.resultado()
-evalucion.bucle()
