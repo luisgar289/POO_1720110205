@@ -7,11 +7,14 @@ class Examen():
     falta = 0
     falta1 = 0
     promedio = 0
-    bucle = None
+    bucle = str("")
+    falta2 = 0
 
-    def __init__(self):
-        pass
+    while bucle == "s" :
 
+        def __init__(self):
+            pass
+    
     def materia (self):
         self.materia = input("Materia: ")
            
@@ -28,18 +31,22 @@ class Examen():
         if self.retardos == 3:
             self.falta = int(input("Numero de faltas: " ))
             falta1 = self.falta + 1
+            self.falta2 = self.clases - falta1 
         else:
             self.falta = int(input("Numero de faltas: "))
+            self.falta2 = self.clases - self.falta
 
     def promedio (self):
-        self.promedio = self.falta1 * 100 / self.clases
-
+        self.promedio = int(self.falta2 * 100 / self.clases)
+        print("Porcentaje de asistencias {}%" .format(self.promedio))
+        
     def resultado (self):
-        if 80 >= self.promedio:
+        if self.promedio >= 80:
             print("{} tiene derecho a presentar examen" .format(self.alumno))
         else:
             print("{} no tiene derecho a presentar examen" .format(self.alumno))
-            
+
+    def bucle (self):
         bucle = str(input("Otra evaluación (s/n): "))
 
 evaluacion = Examen()
@@ -51,3 +58,4 @@ evaluacion.retardo()
 evaluacion.falta()
 evaluacion.promedio()
 evaluacion.resultado()
+evaluacion.bucle()
