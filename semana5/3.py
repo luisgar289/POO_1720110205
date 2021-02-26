@@ -35,4 +35,5 @@ while detener == "s"
                 print("Tu pregunta es de fisica")
             else:
                 print("Tu pregunta es de Biologia")
-    
+        
+        print ("Con %d%% de seguridad te lo digo" % (confidence))
