@@ -25,4 +25,14 @@ while detener == "s"
     detener = str(input("¿Detener? (s/n)"))
 
 
-    print ("result: '%s' with %d%% confidence" % (label, confidence))
+    if label == "matematicas":
+        print("Tu pregunta es de Matematicas")
+    else:
+        if label == "historia":
+            print("Tu pregunta es de Historia")
+        else:
+            if label == "fisica":
+                print("Tu pregunta es de fisica")
+            else:
+                print("Tu pregunta es de Biologia")
+    
