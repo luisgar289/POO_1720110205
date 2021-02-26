@@ -27,13 +27,15 @@ while detener == "s"
 
     if label == "matematicas":
         print("Tu pregunta es de Matematicas")
+        print ("Con %d%% de seguridad te lo digo" % (confidence))
     else:
         if label == "historia":
             print("Tu pregunta es de Historia")
+            print ("Con %d%% de seguridad te lo digo" % (confidence))
         else:
             if label == "fisica":
                 print("Tu pregunta es de fisica")
+                print ("Con %d%% de seguridad te lo digo" % (confidence))
             else:
                 print("Tu pregunta es de Biologia")
-        
-        print ("Con %d%% de seguridad te lo digo" % (confidence))
+                print ("Con %d%% de seguridad te lo digo" % (confidence))
