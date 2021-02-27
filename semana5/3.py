@@ -15,27 +15,28 @@ def classify(text):
     else:
         response.raise_for_status()
 
-while detener == "s"
+
+while True:
 
     texto =  input("Hazme una pregunta sobre matematicas, historia, fisica o biologia: ")
     demo = classify(texto)
 
     label = demo["class_name"]
     confidence = demo["confidence"]
-    detener = str(input("¿Detener? (s/n)"))
 
 
-    if label == "matematicas":
+    if label == "Matematicas":
         print("Tu pregunta es de Matematicas")
         print ("Con %d%% de seguridad te lo digo" % (confidence))
     else:
-        if label == "historia":
+        if label == "Historia":
             print("Tu pregunta es de Historia")
             print ("Con %d%% de seguridad te lo digo" % (confidence))
         else:
-            if label == "fisica":
+            if label == "Fisica":
                 print("Tu pregunta es de fisica")
                 print ("Con %d%% de seguridad te lo digo" % (confidence))
             else:
-                print("Tu pregunta es de Biologia")
-                print ("Con %d%% de seguridad te lo digo" % (confidence))
+                if label == "Biologia":
+                    print("Tu pregunta es de Biologia")
+                    print ("Con %d%% de seguridad te lo digo" % (confidence))
